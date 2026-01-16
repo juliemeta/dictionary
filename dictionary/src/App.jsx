@@ -11,10 +11,13 @@ export default function App() {
         </main>
       </div>
       <footer className="text-center">
-        <div>~ Coded by Julie M. Jeffries ~</div>
+        <div>This project was coded by Julie M. Jeffries</div>
         <div>
-          Project is open-sourced on{" "}
-          <a href="https://github.com/juliemeta/dictionary">GitHub</a>
+          and is{" "}
+          <a href="https://github.com/juliemeta/dictionary">
+            open-sourced onGitHub
+          </a>
+          .
         </div>
       </footer>
     </div>

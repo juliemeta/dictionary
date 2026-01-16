@@ -2,3 +2,30 @@
   color: #ffcece;
   -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
+
+.search-form {
+  padding: 0 15px;
+}
+
+.search-bar {
+  width: 70%;
+  padding: 5px 10px;
+  border: 1px solid #ffcece;
+  border-radius: 4px;
+}
+
+.search-button {
+  background: #ffcece;
+  color: #ffffff;
+  font-size: large;
+  font-weight: 600;
+  width: 20%;
+  margin-left: 10px;
+  border: 1.5px dotted #ffffff;
+}
+
+.search-button:hover {
+  background: #ffcaca;
+  color: #ffffff;
+  border: 1.5px dotted #fff0f0;
+}
