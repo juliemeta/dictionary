@@ -3,6 +3,11 @@
   -webkit-text-stroke: 1px rgb(255, 255, 255);
 }
 
+.Dictionary h2 {
+  color: #ffffff;
+  -webkit-text-stroke: 1px #ffc1c8;
+}
+
 .search-form {
   padding: 0 15px;
 }

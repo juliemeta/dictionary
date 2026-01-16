@@ -15,7 +15,7 @@ export default function App() {
         <div>
           and is{" "}
           <a href="https://github.com/juliemeta/dictionary">
-            open-sourced onGitHub
+            open-sourced on GitHub
           </a>
           .
         </div>
