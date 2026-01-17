@@ -1,0 +1,8 @@
+.SearchResult {
+  padding: 20px 60px 35px 15px;
+}
+
+.SearchResult h2 {
+  color: #ffffff;
+  -webkit-text-stroke: 1px #ffc1c8;
+}

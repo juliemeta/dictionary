@@ -8,8 +8,7 @@ export default function Dictionary() {
   let [searchResult, setSearchResult] = useState(null);
 
   function handleResponse(response) {
-    console.log(response);
-    setSearchResult(response.data.meanings[1].definition);
+    setSearchResult(response.data);
   }
 
   function search(event) {
