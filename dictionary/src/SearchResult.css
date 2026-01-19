@@ -1,8 +1,19 @@
 .SearchResult {
-  padding: 20px 60px 35px 15px;
+  padding: 20px 60px 0px 0px;
 }
 
-.SearchResult h2 {
+.definitions-division {
+  background: #ffc1c8;
+  padding: 0 5px 5px 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.SearchResult .keyword {
   color: #ffffff;
-  -webkit-text-stroke: 1px #ffc1c8;
+  padding-bottom: 10px;
+}
+
+.SearchResult .part-of-speech {
+  color: #ffffff;
 }

@@ -26,17 +26,19 @@ export default function Dictionary() {
   return (
     <div className="Dictionary">
       <h1 className="text-center">Dictionary</h1>
-      <h2 className="text-center">Which word do you want to look up?</h2>
+      <h2 className="subheading text-center">
+        Which word do you want to look up?
+      </h2>
       <form className="search-form" onSubmit={search}>
         <input
-          className="search-bar"
+          className="search-bar shadow"
           type="search"
           onChange={handleKeywordChange}
           placeholder="Please type your word here..."
         />
         <button className="btn search-button shadow">Search!</button>
       </form>
-      <SearchResult searchResult={searchResult} />
+      {searchResult && <SearchResult searchResult={searchResult} />}
     </div>
   );
 }
