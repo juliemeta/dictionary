@@ -2,14 +2,10 @@ import React from "react";
 import "./SearchResult.css";
 
 export default function SearchResult(props) {
-  console.log(props.searchResult);
-
   if (props.searchResult) {
     return (
       <div className="SearchResult">
-        <h2 className="keyword text-capitalize">
-          📖 {props.searchResult.word} ⤵
-        </h2>
+        <h2 className="keyword text-center">{props.searchResult.word}</h2>
 
         {props.searchResult.meanings?.map((meaning, index) => (
           <div key={index}>
@@ -25,7 +21,6 @@ export default function SearchResult(props) {
       </div>
     );
   } else {
-    // Hvis der ikke er noget searchResult
     return (
       <div className="SearchResult">
         <p>Start med at søge efter et ord.</p>

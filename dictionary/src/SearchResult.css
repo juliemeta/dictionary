@@ -1,5 +1,7 @@
 .SearchResult {
-  padding: 20px 60px 0px 0px;
+  margin: 0 auto;
+  padding: 20px 0 0 0;
+  max-width: 80%;
 }
 
 .definitions-division {
