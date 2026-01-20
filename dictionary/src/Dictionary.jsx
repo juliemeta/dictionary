@@ -34,7 +34,7 @@ export default function Dictionary() {
           className="search-bar shadow"
           type="search"
           onChange={handleKeywordChange}
-          placeholder="Please type your word here..."
+          placeholder="Type keyword..."
         />
         <button className="btn search-button shadow">Search!</button>
       </form>

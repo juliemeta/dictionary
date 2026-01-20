@@ -7,15 +7,27 @@
 .definitions-division {
   background: #ffc1c8;
   padding: 0 5px 5px 15px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   border-radius: 4px;
 }
 
-.SearchResult .keyword {
-  color: #ffffff;
-  padding-bottom: 10px;
+.keyword-heading {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #ffe3b0;
 }
 
-.SearchResult .part-of-speech {
+.keyword-heading .emoji {
+  font-size: 15px;
+}
+
+.keyword {
+  margin-bottom: 0;
+}
+
+.part-of-speech {
   color: #ffffff;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
