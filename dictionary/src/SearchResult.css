@@ -11,6 +11,14 @@
   border-radius: 4px;
 }
 
+.definitions-division p {
+  color: #000000;
+}
+
+.definitions-division strong {
+  color: #ffffff;
+}
+
 .keyword-heading {
   text-align: center;
   margin-bottom: 15px;
@@ -24,10 +32,10 @@
 
 .keyword {
   margin-bottom: 0;
+  color: #ffffff;
 }
 
 .part-of-speech {
-  color: #ffffff;
   font-weight: 500;
   margin-bottom: 10px;
 }

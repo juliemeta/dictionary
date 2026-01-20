@@ -14,17 +14,19 @@ export default function SearchResult(props) {
           <div key={index}>
             <div className="definitions-division shadow">
               <h3 className="keyword">{props.searchResult.word}</h3>
+              <p className="phonetics">/{props.searchResult.phonetic}/</p>
               <p className="part-of-speech fst-italic">
                 {" "}
                 {meaning.partOfSpeech}
               </p>
+
               <p className="definition">
                 <strong>Definition</strong> <br />
                 {meaning.definition}.
               </p>
               {meaning.example && (
                 <p className="example fst-italic">
-                  Example: "{meaning.example}."
+                  Example: "{meaning.example}".
                 </p>
               )}
 
