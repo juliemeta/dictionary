@@ -1,8 +1,30 @@
 import React from "react";
+import Photos from "./Photos";
 import "./SearchResult.css";
 
 export default function SearchResult(props) {
-  if (props.searchResult) {
+  if (!props.searchResult) {
+    // if no searchResult
+    return null;
+  }
+
+  // if no meanings ("null") or meanings is empty
+  if (
+    !props.searchResult.meanings ||
+    props.searchResult.meanings.length === 0
+  ) {
+    return (
+      <div className="SearchResult">
+        <p className="error-message text-center">
+          Did you make a typo? 🤔 <br />
+          Because the word "
+          <strong>{props.searchResult.word || props.keyword}</strong>" was not
+          found in our English dictionary.
+        </p>
+      </div>
+    );
+  } else {
+    // if meanings exist
     return (
       <div className="SearchResult">
         <h2 className="keyword-heading">
@@ -25,9 +47,7 @@ export default function SearchResult(props) {
                 {meaning.definition}.
               </p>
               {meaning.example && (
-                <p className="example fst-italic">
-                  Example: "{meaning.example}".
-                </p>
+                <p className="example fst-italic">👉 "{meaning.example}".</p>
               )}
 
               {meaning.synonyms?.length > 0 && (
@@ -41,12 +61,7 @@ export default function SearchResult(props) {
             </div>
           </div>
         ))}
-      </div>
-    );
-  } else {
-    return (
-      <div className="SearchResult">
-        <p>Please type a word in the search bar above 🙂</p>
+        <Photos />
       </div>
     );
   }

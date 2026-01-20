@@ -14,7 +14,7 @@ export default function App() {
         <div>This project was coded by Julie M. Jeffries</div>
         <div>
           and is{" "}
-          <a href="https://github.com/juliemeta/dictionary">
+          <a href="https://github.com/juliemeta/dictionary" target="_blank">
             open-sourced on GitHub
           </a>
           .
