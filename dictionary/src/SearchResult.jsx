@@ -15,6 +15,12 @@ export default function SearchResult(props) {
               {meaning.example && (
                 <p className="example fst-italic">Example: {meaning.example}</p>
               )}
+
+              {meaning.synonyms && (
+                <p className="synonyms">
+                  <strong>Synonyms: {meaning.synonyms}</strong>
+                </p>
+              )}
             </div>
           </div>
         ))}
@@ -23,7 +29,7 @@ export default function SearchResult(props) {
   } else {
     return (
       <div className="SearchResult">
-        <p>Start med at søge efter et ord.</p>
+        <p>Please type a word in the search bar above 🙂</p>
       </div>
     );
   }
