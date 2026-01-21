@@ -11,11 +11,37 @@ export default function Dictionary() {
 
   // API response for dictionary
   function handleDictionaryResponse(response) {
-    setSearchResult(response.data);
+    const data = response.data;
+    setSearchResult(data);
+
+    // only if meanings exist then search for photos
+    if (data.meanings?.length > 0) {
+      fetchPexelsPhotos(data.word);
+    } else {
+      // if no word then clear recent photos
+      setPhotos(null);
+    }
   }
 
-  function handlePexelsResponse(response) {
-    setPhotos(response.data.photos);
+  // Pexels API
+  function fetchPexelsPhotos(word) {
+    const pexelsApiKey =
+      "WtfXQhN4zMNDB5wNhkpemrAxlLpHgLYQy1bnOyQ7HUtMy7H6QXpoJWs9";
+    const pexelsApiUrl = `https://api.pexels.com/v1/search?query=${word}&per_page=6`;
+
+    axios
+      .get(`${pexelsApiUrl}`, {
+        headers: {
+          Authorization: `${pexelsApiKey}`,
+        },
+      })
+      .then((response) => {
+        setPhotos(response.data.photos);
+      })
+      .catch((error) => {
+        console.error("Pexels API error:", error);
+        setPhotos(null);
+      });
   }
 
   // Dictionary search
@@ -24,17 +50,6 @@ export default function Dictionary() {
     const apiKey = "c2t7ea4432f52e0o6d402fd54c5bc269";
     const apiUrl = `https://api.shecodes.io/dictionary/v1/define?word=${keyword}&key=${apiKey}`;
     axios.get(apiUrl).then(handleDictionaryResponse);
-
-    const pexelsApiKey =
-      "WtfXQhN4zMNDB5wNhkpemrAxlLpHgLYQy1bnOyQ7HUtMy7H6QXpoJWs9";
-    const pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
-    axios
-      .get(`${pexelsApiUrl}`, {
-        headers: {
-          Authorization: `${pexelsApiKey}`,
-        },
-      })
-      .then(handlePexelsResponse);
   }
 
   function handleSubmit(event) {
@@ -61,10 +76,12 @@ export default function Dictionary() {
         />
         <button className="btn search-button shadow">Search</button>
       </form>
-      {searchResult?.meanings?.length > 0 && (
+      {searchResult && (
         <>
           <SearchResult searchResult={searchResult} keyword={keyword} />
-          {photos && <Photos photos={photos} />}
+          {searchResult.meanings?.length > 0 && photos && (
+            <Photos photos={photos} />
+          )}
         </>
       )}
     </div>

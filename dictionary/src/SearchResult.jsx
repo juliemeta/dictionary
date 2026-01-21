@@ -15,7 +15,7 @@ export default function SearchResult(props) {
     return (
       <div className="SearchResult">
         <p className="error-message text-center">
-          Did you make a typo? 🤔 Please try again.
+          Did you make a typo? <br /> Please try again. 😁
         </p>
       </div>
     );
