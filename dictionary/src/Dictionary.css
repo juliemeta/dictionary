@@ -36,3 +36,14 @@
   color: #ffffff;
   border: 1.5px dotted #fff0f0;
 }
+
+@media (max-width: 900px) {
+  .search-bar {
+    width: 75%;
+  }
+
+  .search-button {
+    width: 25%;
+    margin-left: 5px;
+  }
+}

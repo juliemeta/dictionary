@@ -14,3 +14,9 @@
   color: #8ed6ff;
   margin-bottom: 25px;
 }
+
+@media (max-width: 900px) {
+  .app-container {
+    margin-top: 10px;
+  }
+}
