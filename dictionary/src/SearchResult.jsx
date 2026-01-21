@@ -1,5 +1,4 @@
 import React from "react";
-import Photos from "./Photos";
 import "./SearchResult.css";
 
 export default function SearchResult(props) {
@@ -16,10 +15,7 @@ export default function SearchResult(props) {
     return (
       <div className="SearchResult">
         <p className="error-message text-center">
-          Did you make a typo? 🤔 <br />
-          Because the word "
-          <strong>{props.searchResult.word || props.keyword}</strong>" was not
-          found in our English dictionary.
+          Did you make a typo? 🤔 Please try again.
         </p>
       </div>
     );
@@ -61,7 +57,6 @@ export default function SearchResult(props) {
             </div>
           </div>
         ))}
-        <Photos />
       </div>
     );
   }

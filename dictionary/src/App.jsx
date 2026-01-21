@@ -5,7 +5,7 @@ import Dictionary from "./Dictionary";
 export default function App() {
   return (
     <div className="App">
-      <div className="container shadow">
+      <div className="app-container shadow">
         <main>
           <Dictionary />
         </main>
